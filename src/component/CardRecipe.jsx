@@ -1,7 +1,6 @@
-// RecipeCard.jsx
 import React from 'react';
 
-const RecipeCardd = ({ recipe }) => {
+const CardRecipe = ({ recipe }) => {
   return (
     <div className="bg-white border rounded-lg overflow-hidden shadow-lg">
       <img src={recipe.strMealThumb} alt={recipe.strMeal} className="w-full h-32 object-cover" />
@@ -13,4 +12,4 @@ const RecipeCardd = ({ recipe }) => {
   );
 };
 
-export default RecipeCardd;
+export default CardRecipe;

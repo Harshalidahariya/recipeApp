@@ -1,9 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
-import RecipeCard from './RecipeCardd';
+import { useLocation } from 'react-router-dom';
+import CardRecipe from './CardRecipe';
 
-const RecipeSection = ({ category }) => {
+const RecipeSection = () => {
   const [recipes, setRecipes] = useState([]);
+  const location = useLocation();
+  const category = new URLSearchParams(location.search).get('category');
 
   useEffect(() => {
     const fetchRecipes = async () => {
@@ -27,9 +29,13 @@ const RecipeSection = ({ category }) => {
     <div className="mt-6">
       <h2 className="text-2xl font-bold mb-4">{category} Recipes</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.idMeal} recipe={recipe} />
-        ))}
+        {recipes.length > 0 ? (
+          recipes.map((recipe) => (
+            <CardRecipe key={recipe.idMeal} recipe={recipe} />
+          ))
+        ) : (
+          <p className="text-gray-700">No recipes found for {category}.</p>
+        )}
       </div>
     </div>
   );
