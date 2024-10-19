@@ -38,8 +38,8 @@ const MealSearch = () => {
     <div className="container mx-auto p-4 bg-gray-100 min-h-screen">
       <div className="meal-wrapper">
         <div className="meal-search">
-          <h2 className="text-2xl font-bold mb-2">Find Meals For Your Ingredients</h2>
-          <blockquote className="italic mb-4">Real food doesn't have ingredients, real food is ingredients.<br /><cite>- Jamie Oliver</cite></blockquote>
+          <h2 className="text-2xl font-bold mb-2">Get Dishes for your Recipe's</h2>
+          <blockquote className="italic mb-4">Cooking is like love. It should be entered into with abandon or not at all.<br /><cite>- Harriet van Horne</cite></blockquote>
 
           <div className="meal-search-box flex items-center">
             <input 

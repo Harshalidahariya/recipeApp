@@ -10,3 +10,15 @@ export default {
   plugins: [],
 }
 
+// module.exports = {
+//   // Other configurations
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         cursive: ['Pacifico', 'cursive'],
+//       },
+//     },
+//   },
+//   variants: {},
+//   plugins: [],
+// };

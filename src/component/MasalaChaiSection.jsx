@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RecipeCard from './RecipeCard'; // Assuming you have a RecipeCard component
 
-const MasalaChai = () => {
+const MasalaChaiSection = () => {
   const [recipes, setRecipes] = useState([]);
 
   const fetchRecipes = async () => {
@@ -28,4 +28,4 @@ const MasalaChai = () => {
   );
 };
 
-export default MasalaChai;
+export default MasalaChaiSection;
