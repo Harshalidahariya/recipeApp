@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link, useHistory } from 'react-router-dom';
-import Header from './component/Header';
-import MealSearch from './component/MealSearch';
-import Diet from './component/Diet';
-import Veg from './component/Veg';
+import Header from './component/Structure/Header';
+import MealSearch from './component/Structure/MealSearch';
+import Diet from './component/HeadItems/ItemsWithoutIcon/Diet/Diet';
+import Veg from './component/HeadItems/ItemsWithoutIcon/Veg/Veg';
 import NonVeg from './component/NonVeg';
-import Chinese from './component/Chinese';
-import Fries from './component/Fries';
-import Sweets from './component/Sweets';
-import Footer from './component/Footer';
-import RecipeSection from './component/RecipeSection';
-import SamosaVarieties from './component/SamosaVarieties';
-import SamosaRecipe from './component/SamosaRecipe';
-import PulavVarieties from './component/PulavVarieties';
-import PulavRecipe from './component/PulavRecipe';
-import RasgullaRecipe from './component/RasgullaRecipe';
-import Masala from './component/Masala';
-import MalaiKofta from './component/MalaiKofta';
+import Chinese from './component/HeadItems/ItemsWithoutIcon/Chinese/Chinese';
+import Fries from './component/HeadItems/ItemsWithoutIcon/Fries/Fries';
+import Sweets from './component/HeadItems/ItemsWithoutIcon/Sweet/Sweets';
+import Footer from './component/Structure/Footer';
+import RecipeSection from './component/Structure/RecipeSection';
+import SamosaVarieties from './component/HeadItems/ItemsWithIcon/Samosa/SamosaVarieties';
+import SamosaRecipe from './component/HeadItems/ItemsWithIcon/Samosa/SamosaRecipe';
+import PulavVarieties from './component/HeadItems/ItemsWithIcon/Pulav/PulavVarieties';
+import PulavRecipe from './component/HeadItems/ItemsWithIcon/Pulav/PulavRecipe';
+import RasgullaRecipe from './component/HeadItems/ItemsWithIcon/RasGulla/RasgullaRecipe';
+import Masala from './component/HeadItems/ItemsWithIcon/MasalaChai/Masala';
+import MalaiKofta from './component/HeadItems/ItemsWithIcon/MalaiKofta/MalaiKofta';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -91,7 +91,6 @@ const App = () => {
           {activeSection === 'Sweets' && <Sweets />}
         </main>
 
-        <MealSearch />
 
         <Switch>
           <Route path="/samosa-varieties" component={SamosaVarieties} />
@@ -104,9 +103,12 @@ const App = () => {
           <Route path="/recipe-section" component={RecipeSection} />
         </Switch>
 
+        <MealSearch />
+
         <Footer className="bg-gray-800 text-white p-4 text-center">
           <img src="/images/logo.jpg" alt="Harsha's Kitchen Logo" className="h-16" />
         </Footer>
+        
       </div>
     </Router>
   );
