@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RecipeCard from './RecipeCard';
+import RecipeCard from './Structure/RecipeCard';
 
 const NonVeg = () => {
   const [meals, setMeals] = useState([]);

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaWindowClose } from 'react-icons/fa';
 const RecipeCard = ({ meal, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
@@ -9,7 +9,7 @@ const RecipeCard = ({ meal, onClose }) => {
           className="text-red-500 mb-4"
           onClick={onClose}
         >
-          <i className="fas fa-times"></i> Close
+          <FaWindowClose/>
         </button>
         <div className="bg-pink-200 p-4 rounded">
           <h2 className="text-2xl font-bold">{meal.strMeal}</h2>
